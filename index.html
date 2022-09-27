@@ -65,6 +65,11 @@
         </div>
 
         <div class="home__social">
+          <a title="Copy Email" class="home__social-icon">
+            <i onclick="copy();" class="bx bx-mail-send"> </i>
+
+            <textarea class="visuallyhidden" id="box"></textarea>
+          </a>
           <a
             href="https://www.linkedin.com/in/madhavbhavsar"
             target="_blank"
@@ -148,14 +153,13 @@
           <div>
             <h2 class="skills__subtitle">Technical Skills</h2>
             <p class="skills__text">
-              My technical Skills include Programming in Java, CS Fundamentals,
-              NoSql and Sql Databases like Firebase Realtime, Firestore,
-              Mssql.<br /><br />Also familiar with various Mobile Technologies
-              like Android Studio, Flutter for creating, designing and
-              maintaining Android Apps. Created various projects based on these
-              technologies like KIDZee, Order Dispatch App, Market App.
+              Programming Languages :- Java, C++<br /><br />CS Fundamentals :-
+              DSA, OOPs, DBMS<br /><br />Mobile Development :– Android Studio,
+              Flutter<br /><br />Databases – SQL, Firebase Realtime Database
+              (JSON Format), Firestore NoSql Database<br /><br />Others – Git,
+              Github, Firebase Cloud API
             </p>
-            <div class="skills__data">
+            <!-- <div class="skills__data">
               <div class="skills__names">
                 <i class="bx bxl-html5 skills__icon"></i>
                 <span class="skills__name">HTML5</span>
@@ -194,7 +198,7 @@
               <div>
                 <span class="skills__percentage">85%</span>
               </div>
-            </div>
+            </div> -->
           </div>
 
           <div>
@@ -314,11 +318,6 @@
               <p class="project-details"></p>
               <a href="#" target="_blank" class="project-link">Check it Out</a>
             </div>
-          </div>
-        </div>
-
-        <div class="projects-container">
-          <div class="work__container bd-grid">
             <div class="project-container project-card">
               <center>
                 <!-- <video width="320" height="240" controls autoplay> -->
@@ -395,23 +394,26 @@
       <section class="contact section" id="contact">
         <h2 class="section-title">Contact</h2>
 
-        <div class="contact__container bd-grid">
-          <form action="" class="contact__form">
-            <input type="text" placeholder="Name" class="contact__input" />
-            <input type="mail" placeholder="Email" class="contact__input" />
-            <textarea
-              name=""
-              id=""
-              cols="0"
-              rows="10"
-              class="contact__input"
-            ></textarea>
-            <input
-              type="button"
-              value="Enviar"
-              class="contact__button button"
-            />
-          </form>
+        <div class="work__container bd-grid">
+          <p>E-mail :- madhavbhavsar05@gmail.com</p>
+          <div class="contact__container bd-grid">
+            <form action="" class="contact__form">
+              <input type="text" placeholder="Name" class="contact__input" />
+              <input type="mail" placeholder="Email" class="contact__input" />
+              <textarea
+                name=""
+                id=""
+                cols="0"
+                rows="10"
+                class="contact__input"
+              ></textarea>
+              <input
+                type="button"
+                value="Submit"
+                class="contact__button button"
+              />
+            </form>
+          </div>
         </div>
       </section>
     </main>

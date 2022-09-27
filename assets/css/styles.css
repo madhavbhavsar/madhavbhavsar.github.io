@@ -84,7 +84,24 @@ img {
   height: auto;
   display: block;
 }
+.visuallyhidden{position:absolute;clip:rect(1px,1px,1px,1px)}
+.copybutton{background-color:#fff;border:0;outline:0;cursor:pointer;opacity:1;position:absolute;width:10px;height:10px;z-index:9;border-radius:24px}
+.button-tooltip-container {
+    display: flex;
+    align-items: center;
+    margin-top: 0px;
+    min-height: 0px;
 
+}
+#custom-tooltip {
+    display: none;
+    margin-left: 0px;
+    font-size: small;
+    padding: 1px 1px;
+    background-color: #000000df;
+    border-radius: 4px;
+    color: #fff;
+}
 /*===== CLASS CSS ===== */
 .section-title {
   position: relative;
