@@ -143,6 +143,7 @@ img {
   margin-right: var(--mb-2);
   grid-template-columns: 1fr;
   justify-content: center;
+  align-items: stretch;
 }
 
 .l-header {
@@ -413,12 +414,17 @@ img {
 
 .child{
   margin: 0 auto;
+  display: flex;
+  height: 100%;
 }
 
 .project-container {
   text-align: center;
   width: 21.875rem;
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .project-container p {
@@ -431,6 +437,11 @@ img {
 
 .project-details {
   margin-bottom: var(--bottom-margin);
+  flex-grow: 1;
+}
+
+.project-link {
+  margin-top: auto;
 }
 
 /* Projects section ends */
@@ -618,7 +629,10 @@ img {
   }
 }
 @media (min-width: 900px) {
-  .bd-grid2 { grid-template-columns: repeat(3, 1fr); }
+  .bd-grid2 { 
+    grid-template-columns: repeat(3, 1fr);
+    align-items: stretch;
+  }
 }
 @media screen and (min-width: 992px) {
   .bd-grid {
