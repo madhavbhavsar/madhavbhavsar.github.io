@@ -18,6 +18,172 @@
       sizes="32x32"
       href="assets/icons/favicon-32x324.png"
     />
+    
+    <style>
+      /* Experience Section Styles */
+      .experience__container {
+        row-gap: 2rem;
+      }
+      
+      .experience__item {
+        background-color: #fff;
+        padding: 2rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 25px rgba(14, 36, 49, 0.15);
+        margin-bottom: 2rem;
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        gap: 1.5rem;
+        align-items: start;
+      }
+      
+      .experience__logo {
+        width: 100px;
+        height: 100px;
+        border-radius: 0.5rem;
+        object-fit: contain;
+        padding: 0.5rem;
+        background-color: #f5f5f5;
+        border: 2px solid #f0f0f0;
+      }
+      
+      .experience__content {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      
+      .experience__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+      
+      .experience__title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #4070f4;
+        margin: 0;
+      }
+      
+      .experience__company {
+        font-size: 1rem;
+        font-weight: 500;
+        color: #0e2431;
+        margin: 0.25rem 0;
+      }
+      
+      .experience__duration {
+        font-size: 0.875rem;
+        color: #666;
+        font-style: italic;
+      }
+      
+      .experience__description {
+        list-style: none;
+        padding: 0;
+        margin: 1rem 0 0 0;
+      }
+      
+      .experience__description li {
+        position: relative;
+        padding-left: 1.5rem;
+        margin-bottom: 0.75rem;
+        color: #555;
+        line-height: 1.6;
+      }
+      
+      .experience__description li:before {
+        content: "▹";
+        position: absolute;
+        left: 0;
+        color: #4070f4;
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+      
+      @media screen and (max-width: 768px) {
+        .experience__item {
+          grid-template-columns: 80px 1fr;
+          gap: 1rem;
+          padding: 1.5rem;
+        }
+        
+        .experience__logo {
+          width: 80px;
+          height: 80px;
+        }
+        
+        .experience__title {
+          font-size: 1.1rem;
+        }
+        
+        .experience__company {
+          font-size: 0.9rem;
+        }
+      }
+      
+      @media screen and (max-width: 480px) {
+        .experience__item {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+        
+        .experience__logo {
+          margin: 0 auto;
+        }
+        
+        .experience__header {
+          justify-content: center;
+        }
+        
+        .experience__description li {
+          text-align: left;
+        }
+      }
+      
+      /* Fix for Projects Section Mobile Alignment */
+      .bd-grid2 {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0 1rem;
+        align-items: stretch;
+      }
+      
+      @media (min-width: 900px) {
+        .bd-grid2 { 
+          grid-template-columns: repeat(3, 1fr);
+          align-items: stretch;
+        }
+      }
+      
+      .child {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        width: 100%;
+        height: 100%;
+      }
+      
+      .project-container {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+      
+      .project-pic {
+        width: 65%;
+        height: auto;
+        margin: 0 auto;
+      }
+    </style>
   </head>
   <body>
     <!--===== HEADER =====-->
@@ -34,6 +200,9 @@
             </li>
             <li class="nav__item">
               <a href="#about" class="nav__link">About</a>
+            </li>
+            <li class="nav__item">
+              <a href="#experience" class="nav__link">Experience</a>
             </li>
             <li class="nav__item">
               <a href="#skills" class="nav__link">Skills</a>
@@ -66,32 +235,33 @@
 
         <div class="home__social">
           <a
-            title="madhavbhavsar21@gmail.com"
+            title="Resume"
             class="home__social-icon"
+            target="_blank" 
             href="mailto:madhavbhavsar21@gmail.com"
           >
             <i class="bx bx-mail-send"> </i>
           </a>
+          <a
+          title="madhavbhavsar21@gmail.com"
+          class="home__social-icon"
+          href="https://drive.google.com/file/d/1mNmVoAe6j5PNlXfGR2WNp8N8SC_020A3/view?usp=sharing"
+        >
+          <i class="bx bxs-file-doc"> </i>
+        </a>
           <a
             href="https://www.linkedin.com/in/madhavbhavsar"
             target="_blank"
             class="home__social-icon"
             ><i class="bx bxl-linkedin"></i
           ></a>
-          <!-- <a href="" class="home__social-icon"><i class='bx bxl-behance' ></i></a> -->
           <a
             href="https://www.github.com/madhavbhavsar"
             target="_blank"
             class="home__social-icon"
             ><i class="bx bxl-github"></i
           ></a>
-          <a
-            href="https://www.twitter.com/Madbhavsar"
-            target="_blank"
-            class="home__social-icon"
-            ><i class="bx bxl-twitter"></i
-          ></a>
-          <!-- <a href="https://www.github.com/madhavbhavsar" target="_blank" class="home__social-icon"><img src="./assets/img/github.png" ></a> -->
+       
           <a
             href="https://www.leetcode.com/madbhavsar"
             target="_blank"
@@ -99,7 +269,16 @@
             ><img
               src="./assets/img/leetcode.png"
               style="width: 25px; height: 25px" /></a
-          ><!-- -->
+          >
+          <a
+            href="https://stackoverflow.com/users/22754441/madhav-bhavsar"
+            target="_blank"
+            class="home__social-icon"
+            ><img
+              src="./assets/img/stackoverflow.png"
+              style="width: 25px; height: 25px" /></a
+          >
+
         </div>
 
         <div class="home__img">
@@ -141,14 +320,71 @@
           <div>
             <h2 class="about__subtitle">Hi! I'm Madhav</h2>
             <p class="about__text">
-              I'm a Student pursuing Computer Engineering at IAR Gandhinagar,
-              Gujarat, IN. <br /><br />I love creating and designing mobile
-              apps. I am also familier with various mobile development
-              technologies like Android Studio, Flutter. <br /><br />I have also
-              published an App on Google Play Store and also successfull
-              delivered a Freelance project to a client of a local based
-              company. <br /><br />
+              I’m a Software Engineer with over 2.5 years of experience building modern, 
+              high-performance mobile applications using Kotlin, Jetpack Compose, and Clean Architecture. <br /><br />
+              I’ve developed and deployed apps across domains like e-commerce, fintech, AI tools, 
+              and social gaming, focusing on clean, scalable, and user-friendly designs. <br /><br />Contributed to an open-source 
+              Android project with 100K+ downloads on GitHub <a href="https://github.com/Ivy-Apps/ivy-wallet" target="_blank">Ivy Wallet</a> and earned a Stack Overflow reputation of 170+ by helping developers worldwide. <br /><br />
+               I’m passionate about crafting impactful mobile solutions that blend elegant UI, strong architecture, and cutting-edge technology.
+              
+          
             </p>
+          </div>
+        </div>
+      </section>
+
+      <!--===== EXPERIENCE =====-->
+      <section class="experience section" id="experience">
+        <h2 class="section-title">Experience</h2>
+
+        <div class="experience__container bd-grid">
+          <!-- Experience Item 1 -->
+          <div class="experience__item">
+            <img 
+              src="assets/img/brainvire-infotech.jpg" 
+              alt="Brainvire Infotech" 
+              class="experience__logo"
+            />
+            <div class="experience__content">
+              <div class="experience__header">
+                <div>
+                  <h3 class="experience__title">Associate Software Engineer (Android)</h3>
+                  <p class="experience__company">Brainvire Infotech Inc.</p>
+                  <p class="experience__duration">June 2023 - Present | Ahmedabad, Gujarat</p>
+                </div>
+              </div>
+              <ul class="experience__description">
+                <li>Developed strong understanding of Android and Kotlin, crafting applications using Jetpack Compose</li>
+                <li>Gained hands-on experience with various Android SDKs, enhancing app functionality and performance</li>
+                <li>Collaborated with clients to gather requirements, translating them into technical specs for the team</li>
+                <li>Conducted client demos and oversaw Android projects from development to deployment</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Experience Item 2 -->
+          <div class="experience__item">
+            <img 
+              src="assets/img/ncode-logo.jpeg" 
+              alt="nCode Solutions" 
+              class="experience__logo"
+            />
+            <div class="experience__content">
+              <div class="experience__header">
+                <div>
+                  <h3 class="experience__title">Vocational Trainee - Internship</h3>
+                  <p class="experience__company">nCode Solutions - GNFC IT Division</p>
+                  <p class="experience__duration">Dec 2022 - March 2023 | Gandhinagar, Gujarat</p>
+                </div>
+              </div>
+              <ul class="experience__description">
+                <li>Developed a strong understanding of Java and built a web application</li>
+                <li>Gained hands-on experience in Java programming and applied OOP concepts to real-world projects</li>
+                <li>Contributed to the design and development of a web application with focus on functionality and usability</li>
+                <li>Worked with database integration for data storage and retrieval in the application</li>
+                <li>Improved understanding of software development lifecycle (SDLC) through active participation in project tasks</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -161,74 +397,89 @@
           <div>
             <h2 class="skills__subtitle">Technical Skills</h2>
             <p class="skills__text">
-              Programming Languages :- Java, C++<br /><br />CS Fundamentals :-
-              DSA, OOPs, DBMS<br /><br />Mobile Development :– Android Studio,
-              Flutter<br /><br />Databases – SQL, Firebase Realtime Database
-              (JSON Format), Firestore NoSql Database<br /><br />Others – Git,
-              Github, Firebase Cloud API
+              Programming Languages – Kotlin, Java<br /><br />Frameworks / Libraries –
+              Android SDK, Coroutines, Jetpack Compose, Hilt, OKHttp, Glide, Coil, LiveData, Retrofit, Flow,
+Room, ViewModel, Navigation, WorkManager,View Binding, Data Binding, Broadcast Receivers<br /><br />Tools – Android Studio,
+              Flutter, Git, GitHub, Bitbucket, Firebase, Profiling tools, Logcat<br /><br />Databases – SQL, Sqlite, RoomDB, Firestore NoSql Database, Supabase, Firebase Realtime Database<br /><br />Methodologies – Waterfall model, Agile methodology, SDLC
+              <br /><br />
+              Design architectures – Clean Architecture, MVVM-C, MVI, MVP, MVC
+              <br /><br />
+              Security – ProGuard, R8, SSL pinning, NDK
+              <br /><br />
+              Others – REST APIs, GraphQL, XML, JSON, ML Kit, Google Maps, Data Structures & Algorithms,
+              Performance Optimization, Facebook API, Google API, Payment gateway, Google Analytics, CI/CD
+              pipelines
             </p>
-            <!-- <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bxl-html5 skills__icon"></i>
-                <span class="skills__name">HTML5</span>
-              </div>
-              <div class="skills__bar skills__html"></div>
-              <div>
-                <span class="skills__percentage">95%</span>
-              </div>
-            </div>
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bxl-css3 skills__icon"></i>
-                <span class="skills__name">CSS3</span>
-              </div>
-              <div class="skills__bar skills__css"></div>
-              <div>
-                <span class="skills__percentage">85%</span>
-              </div>
-            </div>
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bxl-javascript skills__icon"></i>
-                <span class="skills__name">JAVASCRIPT</span>
-              </div>
-              <div class="skills__bar skills__js"></div>
-              <div>
-                <span class="skills__percentage">65%</span>
-              </div>
-            </div>
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bxs-paint skills__icon"></i>
-                <span class="skills__name">UX/UI</span>
-              </div>
-              <div class="skills__bar skills__ux"></div>
-              <div>
-                <span class="skills__percentage">85%</span>
-              </div>
-            </div> -->
           </div>
 
           <div>
             <a href="https://www.leetcode.com/madbhavsar" target="_blank">
-              <img src="assets/img/work7.jpg" alt="" class="skills__img"
+              <img src="assets/img/profile_leetcode.png" alt="" class="skills__img"
+            /></a>
+              <br />
+            <a href="https://github.com/Ivy-Apps/ivy-wallet" target="_blank">
+              <img src="assets/img/portfolio-github.jpg" alt="" class="skills__img"
             /></a>
           </div>
         </div>
       </section>
 
       <!--===== WORK =====-->
-      <!-- Projects section -->
       <section class="work section" id="work">
         <h2 class="section-title">Projects</h2>
 
-        <!-- <div class="projects-container"> -->
         <div class="bd-grid">
           <div class="bd-grid2">
+
             <div class="child">
               <div class="project-container project-card">
                 <center>
-                  <!-- <video width="320" height="240" controls autoplay> -->
+                  <video
+                    class="project-pic"
+                    controls
+                    playsinline
+                    autoplay
+                    muted
+                    loop
+                  >
+                    <source src="./assets/video/pharmacy.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </center>
+                <br />
+                <h3 class="project-title">United Pharmacy</h3>
+                <p class="project-details">
+                  E-commerce app with 100K+ downloads offering health essentials, 3-hour delivery, prescription upload, and multi-language support.
+                </p>
+                <a href="https://play.google.com/store/apps/details?id=com.unitedpharmacy" target="_blank" class="project-link">PlayStore</a>
+              </div>
+            </div>
+            <div class="child">
+              <div class="project-container project-card">
+                <center>
+                  <video
+                    class="project-pic"
+                    controls
+                    playsinline
+                    autoplay
+                    muted
+                    loop
+                  >
+                    <source src="./assets/video/wallet.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </center>
+                <br />
+                <h3 class="project-title">Wallet Application</h3>
+                <p class="project-details">
+                  Secure digital wallet app with peer-to-peer transfers, bank integration, KYC verification, and QR code payments.
+                </p>
+              
+              </div>
+            </div>
+            <div class="child">
+              <div class="project-container project-card">
+                <center>
                   <video
                     id="myvideo"
                     class="project-pic"
@@ -242,7 +493,6 @@
                       document.getElementById("myvideo").play();
                     </script>
                     <source src="./assets/video/kidz.mp4" type="video/mp4" />
-
                     Your browser does not support the video tag.
                   </video>
                 </center>
@@ -263,15 +513,7 @@
             </div>
             <div class="child">
               <div class="project-container project-card">
-                <!-- <img
-              src="assets/img/pspl/1.jpg"
-              alt="netflic-clone"
-              loading="lazy"
-              class="project-pic"
-            /> -->
-
                 <center>
-                  <!-- <video width="320" height="240" controls autoplay> -->
                   <video
                     id="myvideo"
                     class="project-pic"
@@ -285,7 +527,6 @@
                       document.getElementById("myvideo").play();
                     </script>
                     <source src="./assets/video/pspl.mp4" type="video/mp4" />
-
                     Your browser does not support the video tag.
                   </video>
                 </center>
@@ -304,16 +545,81 @@
                 >
               </div>
             </div>
+           
+            
+            
             <div class="child">
               <div class="project-container project-card">
-                <!-- <img
-              src="assets/images/greenyEarth.png"
-              alt="greeny-earth"
-              loading="lazy"
-              class="project-pic"
-            /> -->
                 <center>
-                  <!-- <video width="320" height="240" controls autoplay> -->
+                  <video
+                    class="project-pic"
+                    controls
+                    playsinline
+                    autoplay
+                    muted
+                    loop
+                  >
+                    <source src="./assets/video/aigeneration.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </center>
+                <br />
+                <h3 class="project-title">AI Photo Enhancer</h3>
+                <p class="project-details">
+                  AI-powered photo editor with avatar generation, style transfer, face enhancement, colorization, and upscaling features.
+                </p>
+          
+              </div>
+            </div>
+            <div class="child">
+              <div class="project-container project-card">
+                <center>
+                  <video
+                    class="project-pic"
+                    controls
+                    playsinline
+                    autoplay
+                    muted
+                    loop
+                  >
+                    <source src="./assets/video/vme.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </center>
+                <br />
+                <h3 class="project-title">Vme Challenge</h3>
+                <p class="project-details">
+                  Interactive outdoor gaming platform with 1K+ downloads, featuring challenge creation and reward-based point system.
+                </p>
+                <a href="https://play.google.com/store/apps/details?id=com.vmechallenge" target="_blank" class="project-link">PlayStore</a>
+              </div>
+            </div>
+            <div class="child">
+              <div class="project-container project-card">
+                <center>
+                  <video
+                    class="project-pic"
+                    controls
+                    playsinline
+                    autoplay
+                    muted
+                    loop
+                  >
+                    <source src="./assets/video/aikeyboard.webm" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </center>
+                <br />
+                <h3 class="project-title">AI Keyboard Application</h3>
+                <p class="project-details">
+                  Custom AI keyboard with multilingual support, ChatGPT-3.5 integration for text generation, grammar correction, and paraphrasing.
+                </p>
+            
+              </div>
+            </div>
+            <div class="child">
+              <div class="project-container project-card">
+                <center>
                   <video
                     id="myvideo"
                     class="project-pic"
@@ -330,7 +636,6 @@
                       src="./assets/video/marketapp.mp4"
                       type="video/mp4"
                     />
-
                     Your browser does not support the video tag.
                   </video>
                 </center>
@@ -357,7 +662,6 @@
             <div class="child">
               <div class="project-container project-card">
                 <center>
-                  <!-- <video width="320" height="240" controls autoplay> -->
                   <video
                     id="myvideo"
                     class="project-pic"
@@ -374,7 +678,6 @@
                       src="./assets/video/addtocart.mp4"
                       type="video/mp4"
                     />
-
                     Your browser does not support the video tag.
                   </video>
                 </center>
@@ -394,17 +697,8 @@
             </div>
             <div class="child">
               <div class="project-container project-card">
-                <!-- <img
-              src="assets/img/pspl/1.jpg"
-              alt="netflic-clone"
-              loading="lazy"
-              class="project-pic"
-            /> -->
-
                 <center>
-                  <!-- <video width="320" height="240" controls autoplay> -->
                   <video
-                    id="myvideo"
                     class="project-pic"
                     controls
                     playsinline
@@ -412,11 +706,7 @@
                     muted
                     loop
                   >
-                    <script>
-                      document.getElementById("myvideo").play();
-                    </script>
                     <source src="./assets/video/botnav3.mp4" type="video/mp4" />
-
                     Your browser does not support the video tag.
                   </video>
                 </center>
@@ -431,7 +721,6 @@
             </div>
           </div>
         </div>
-        <!-- </div> -->
       </section>
 
       <!--===== CONTACT =====-->
@@ -439,8 +728,8 @@
         <div class="contact__container bd-grid">
           <center>
             <a
-              href="https://drive.google.com/file/d/1GDTKq18P0nMmY_Idvo7_NS8IqzzQ1fuk/view?usp=sharing"
-              class="button"
+              href="https://drive.google.com/file/d/1mNmVoAe6j5PNlXfGR2WNp8N8SC_020A3/view?usp=sharing"
+              class="button",
               target="_blank"
               >Resume</a
             >
@@ -451,13 +740,6 @@
 
     <!--===== FOOTER =====-->
     <footer class="footer">
-      <!-- <p class="footer__title">Madhav Bhavsar</p>
-            <div class="footer__social">
-                <a href="#" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
-            </div>
-            <p class="footer__copy">&#169; Created by Madhav Bhavsar</p> -->
     </footer>
 
     <!--===== SCROLL REVEAL =====-->
